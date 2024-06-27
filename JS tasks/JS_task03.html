@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication and Division of two numbers</title>
+</head>
+<body>
+  <h1>Multiplication and Division of two numbers</h1>
+  <label for="i1">Number 1:</label>
+  <input type="number" id="i1">
+  <br>
+  <label for="i2">Number 2:</label>
+  <input type="number" id="i2">
+  <br>
+  <button onclick="multiplication()">multiply</button>
+  <button onclick="division()">divide</button>
+  <p id="result"></p>
+
+  <script>
+     function multiplication() {
+      let i1 = parseFloat(document.getElementById("i1").value);
+      let i2 = parseFloat(document.getElementById("i2").value);
+      let multiplication = i1 * i2;
+
+      let resultText = `Multiplication: ${i1} * ${i2} = ${multiplication}`;
+      document.getElementById("result").innerHTML = resultText;
+    }
+    function division() {
+      let i1 = parseFloat(document.getElementById("i1").value);
+      let i2 = parseFloat(document.getElementById("i2").value);
+      if (i2 === 0) {
+        alert("Cannot divide by zero!");
+        return;
+      }
+      let division = i1 / i2;
+      resultText1 = `Division: ${i1} / ${i2} = ${division}`;
+      document.getElementById("result").innerHTML = resultText1;
+    }
+  </script>
+</body>
+</html>
